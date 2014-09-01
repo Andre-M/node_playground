@@ -1,4 +1,4 @@
-var uptime = require('uptime');
+var uptime = require('./uptime.js');
 
 var uptime_str = uptime.get_uptime();
 
