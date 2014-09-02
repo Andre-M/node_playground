@@ -2,13 +2,9 @@
 
 var fs = require('fs');
 
-function get_uptime(){
+function get_uptime(callback){
 	console.log("In get_uptime... ");
-	fs.readFile('/proc/uptime', function(err, data){
-		if(err) return console.log("error: " +err);
-		console.log("data: " +data.toString());
-		return data.toString();
-	});
+	fs.readFile('/proc/uptime', callback);
 }
 
 module.exports = get_uptime;
